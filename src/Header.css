@@ -4,7 +4,7 @@
 .header {
   background-color: #1C24CA;
   color: white;
-  padding: 20px;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;

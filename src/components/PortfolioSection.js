@@ -157,8 +157,8 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
         <div className="md:col-span-3 order-2 md:order-1">
             {selectedProject ? (
               <>
-                <div className="md:px-6 md:py-0 pb-0 bg-slate-100 md:rounded-b-2xl mb-4 pt-4 px-4 py-0 md:pt-12 md:pb-0 text-left ">
-                  <h3 className="text-2xl md:text-4xl pb-2 md:pb-4 font-bold">
+                <div className="md:px-6 md:py-0 pb-0 bg-slate-100 md:rounded-b-2xl mb-4 pt-4 px-4 py-0 md:pt-8 md:pb-0 text-left ">
+                  <h3 className="text-2xl md:text-4xl pb-2 md:pb-4 font-extrabold">
                     {selectedProject.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 mb-2"> {/* Added margin-bottom for spacing */}
@@ -231,10 +231,10 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
                   </div>
                 </div>
                 <div className="p-4 md:p-6 bg-slate-100 rounded-2xl mb-8 text-left ">
-                  <h5 className="font-bold text-lg text-blue-900">
+                  <h5 className="font-bold text-xl pb-2 text-blue-900">
                     PROJECT DESCRIPTION
                   </h5>
-                  <p className="text-gray-600" style={{ whiteSpace: "pre-wrap" }}>
+                  <p className="text-gray-600 text-sm md:text-base" style={{ whiteSpace: "pre-wrap" }}>
                     {selectedProject.short_description}
                 </p>          
                 </div>
@@ -249,36 +249,36 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
           <div className="md:col-span-2 relative order-1 md:order-2">
             <div className="rounded-b-lg overflow-hidden bg-slate-100 rounded-b-2xl mb-0 md:mb-8">
             <div className="sticky top-0 z-10">
-              <div className="projectheader text-3xl font-bold text-right p-4 py-2 mb-4 text-white rounded-bl-lg md:ml-40 bg-blue-950">
+              <div className="projectheader text-3xl font-bold text-right p-4 py-2 mb-4 text-white rounded-bl-lg ml-40 bg-blue-950">
                 <h4 className="text-lg md:text-2xl">RECENT PROJECTS</h4>
               </div>
-              <div className="flex justify-center space-x-4 mb-6 mt-6">
+              <div className="flex justify-center space-x-3 mb-6 mt-6">
                 <button
-                  className="px-1 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-blue-950 hover:text-white transition duration-300"
+                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-blue-950 hover:text-white transition duration-300"
                   onClick={() => setActiveCategory('all')}
                 >
                   All
                 </button>
                 <button
-                  className="px-1 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-blue-500 hover:border-blue-500 hover:text-white transition duration-300"
+                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-blue-500 hover:border-blue-500 hover:text-white transition duration-300"
                   onClick={() => setActiveCategory('webdev')}
                 >
                   Web Dev
                 </button>
                 <button
-                  className="px-1 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-red-500 hover:border-red-500 hover:text-white transition duration-300"
+                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-red-500 hover:border-red-500 hover:text-white transition duration-300"
                   onClick={() => setActiveCategory('appdev')}
                 >
                   App Dev
                 </button>
                 <button
-                  className="px-1 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-orange-500 hover:border-orange-500 hover:text-white transition duration-300"
+                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-orange-500 hover:border-orange-500 hover:text-white transition duration-300"
                   onClick={() => setActiveCategory('graphicdesign')}
                 >
                   Design
                 </button>
                 <button
-                  className="px-1 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-emerald-500 hover:border-emerald-500 hover:text-white transition duration-300"
+                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-emerald-500 hover:border-emerald-500 hover:text-white transition duration-300"
                   onClick={() => setActiveCategory('video')}
                 >
                   Video
@@ -309,7 +309,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
                     />
                     <div className="flex flex-col justify-between flex-grow">
                       <h4 className="text-sm md:text-lg font-bold">{project.title}</h4>
-                      <div className="flex flex-wrap gap-1 md:gap-2 mt-1">
+                      <div className="flex flex-wrap gap-1 md:gap-2">
                         {project.categories.map((category) => (
                           <span
                             key={category}

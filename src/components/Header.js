@@ -12,9 +12,9 @@ const Header = () => {
   };
 
   return (
-    <nav className="header flex justify-between items-center p-4 relative bg-blue-700">
+    <nav className="header flex justify-between items-center relative bg-blue-700">
       <div className="flex items-center">
-        <img src="/logo.svg" alt="Ryan Designs Logo" className="mr-4" />
+        <img src="/logo.svg" alt="Ryan Designs Logo"/>
       </div>
       <div className="hidden md:block">
         <ul className="nav-links">
@@ -25,7 +25,7 @@ const Header = () => {
       </div>
       <div className="flex items-center">
         <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer"
-           className="hidden sm:inline-block text-white font-bold py-2 px-4 border border-white rounded-full">
+           className="hidden sm:inline-block text-white font-bold py-2 px-4 border border-white rounded-full md:ml-20">
           Download CV
         </a>
         <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer"
