@@ -1,0 +1,17 @@
+.services {
+  /* Add your styles here */
+  padding: 20px 0;
+  background-color: #f8f8f8; /* Example background color */
+  text-align: center;
+}
+
+.services .container h2 {
+  /* Add your styles here */
+  font-size: 2rem;
+}
+
+#result {
+  /* Styles for the randomized service */
+  color: #007bff; /* Example color */
+  font-weight: bold;
+}

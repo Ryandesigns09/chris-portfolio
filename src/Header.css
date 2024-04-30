@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.header {
+  background-color: #1C24CA;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Space Mono', monospace;
+}
+
+.logo-and-links {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Space Mono', monospace;
+  margin-right: 10rem; /* Spacing between logo and nav links */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none; /* Removes bullet points from the list */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+cursor: pointer;
+}
+
+.cv-button a {
+  border: 1px solid white;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: white;
+  text-decoration: none;
+}

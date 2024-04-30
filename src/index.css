@@ -1,0 +1,236 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.image-gallery-image {
+  user-select: none; /* Prevents the text selection cursor */
+}
+
+.image-gallery-slide img {
+  user-select: none; /* Prevents dragging images */
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+.cursor-grab:active {
+  cursor: grabbing;
+}
+
+.carousel-status {
+  display: none;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Space Mono', monospace;
+}
+
+.meimage {
+  margin-left:-100px;
+  z-index: 49;
+}
+
+.chris {
+  font-family: 'Space Mono', monospace;
+  background-image: url('images/circle.png');
+  background-size: contain;
+  font-weight: regular;
+  letter-spacing: -4px;
+  position: relative;
+  text-decoration: none;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact {
+  background-color: #1C24CA;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/backgroundarea.png');
+  background-size: cover;
+  background-position: center;
+  animation: breathing 6s infinite ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+
+#portfolio > div > div > div.md\:col-span-2.relative > div > div.overflow-auto.cursor-grab.relative > div.space-y-4.px-4.text-left > div:nth-child(13) {
+  margin-bottom:30px;
+}
+
+.header-text, .sub-text {
+  position: relative; /* Ensure text appears above the background */
+  z-index: 1; /* Ensure text appears above the background */
+}
+
+@keyframes breathing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+  100% { transform: scale(1); }
+}
+
+#portfolio > div > div > div.md\:col-span-3 > div.p-6.pb-0.bg-slate-100.rounded-b-2xl.mb-4.pt-12.text-left > div.py-4 > div > div.carousel.carousel-slider > div > ul > li.slide.selected.previous > div > img {
+  display:none;
+}
+
+#portfolio > div > div > div.md\:col-span-3 > div.p-6.pb-0.bg-slate-100.rounded-b-2xl.mb-4.pt-12.text-left > div.py-4 > div > div.carousel.carousel-slider > div > ul > li.slide.selected > div > img, #portfolio > div > div > div.md\:col-span-3 > div.p-6.pb-0.bg-slate-100.rounded-b-2xl.mb-4.pt-12.text-left > div.py-4 > div > div.carousel.carousel-slider > div > ul > li.slide.previous > div > img, #portfolio > div > div > div.md\:col-span-3 > div.p-6.pb-0.bg-slate-100.rounded-b-2xl.mb-4.pt-12.text-left > div.py-4 > div > div.carousel.carousel-slider > div > ul > li:nth-child(1) > div > img {
+  display: none;;
+}
+
+.text-x-xs {
+  font-size:0.75rem;
+  font-weight:bold;
+  color:#fff;
+
+}
+
+.space-mono {
+  font-family: 'Space Mono', monospace;
+}
+
+.header-text {
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 0.5rem;
+  letter-spacing:-4px;
+}
+
+.sub-text {
+  font-family: 'Space Mono', monospace;
+  font-weight: 300; /* This corresponds to a lighter font weight */
+}
+
+
+.gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height of the gradient as needed */
+  background: linear-gradient(0deg, rgba(241,245,249,1) 0%, rgba(241,245,249,1) 40%, rgba(241,245,249,0) 100%);
+}
+
+.services {
+  transform: rotate(357.6deg);
+
+  text-align: center;
+  
+  font-size: 32px;
+  width: 105%;
+  margin-left: -50px;
+  margin-top: -39px;
+  box-shadow: 0px 0px 30px #dfe1fe;
+}
+
+.services .container h2 {
+  /* Add your styles here */
+  font-size: 2rem;
+}
+
+#result {
+  /* Styles for the randomized service */
+  color: #007bff; /* Example color */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services {
+  font-family: 'Space Mono', monospace;
+}
+
+
+#result {
+  display: inline-block;
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Animation keyframes for spinning */
+@keyframes spin {
+  from { transform: rotateY(0); }
+  to { transform: rotateY(360deg); }
+}
+
+/* Apply the animation to the #result element when it's updating */
+#result.updating {
+  animation: spin 0.1s ease-in-out;
+}
+
+.projects-area {
+  max-height: 700px;
+}
+
+.cursor-grab { cursor: grab; }
+.cursor-grabbing { cursor: grabbing; }
+
+
+.mobile-menu-toggle {
+  display: none; /* Hide by default on non-mobile screens */
+}
+
+@media (max-width: 768px) {
+  .services {
+    width: 100%;
+    margin-left:0px;
+    box-shadow: 0px 0px 20px #dfe1fe;
+
+  }
+
+
+.projects-area {
+  max-height: 350px;
+}
+
+
+  .services .container h2 {
+    font-size: 1.2rem !important
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Show on mobile screens */
+  }
+  
+  .nav-links {
+    display: none; /* Hide by default on mobile screens */
+  }
+
+  .nav-links.mobile-menu-open {
+    display: block; /* Show when mobile menu is open */
+  }
+
+  .nav-links.mobile-menu-open li:last-child {
+    margin-top: 1rem; /* Adjust spacing between menu items and "Download CV" button */
+  }
+}
+
