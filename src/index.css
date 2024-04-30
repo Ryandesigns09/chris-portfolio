@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .projects-area {
-  max-height: 700px;
+  max-height: 715px;
 }
 
 .cursor-grab { cursor: grab; }
@@ -231,6 +231,10 @@ h1, h2, h3, h4, h5 {
   .nav-links.mobile-menu-open li:last-child {
     margin-top: 1rem; /* Adjust spacing between menu items and "Download CV" button */
   }
+}
+
+.carousel .thumbs-wrapper {
+  margin: 20px 0px 10px !important;
 }
 
 

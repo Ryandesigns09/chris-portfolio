@@ -35,8 +35,8 @@ const projects = [
     title: "Jack Han - Hockey Tactics",
     categories: ["graphicdesign"],
     thumbnail: "images/projects/jhthumb.png",
-    images: ["images/projects/jackhan/img1.png"],
-    short_description: "text",
+    images: ["images/projects/jackhan/img1.png","images/projects/jackhan/img2.png","images/projects/jackhan/img3.png","images/projects/jackhan/img4.png","images/projects/jackhan/img5.png","images/projects/jackhan/img6.png"],
+    short_description: "Working closely with Jack I helped design the 2024 version of his Hockey Tactics ebook. The book featured a look at all 32 NHL teams and the strategies each team deploys.\nI used InDesign, Illustrator, Photoshop and Figma to put together the complete book. ",
     technologies: ["photoshop", "illustrator", "indesign", "figma"]
   },
   {

@@ -157,7 +157,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
         <div className="md:col-span-3 order-2 md:order-1">
             {selectedProject ? (
               <>
-                <div className="p-4 md:p-6 pb-0 bg-slate-100 rounded-2xl md:rounded-b-2xl mb-4 pt-4 md:pt-12 text-left ">
+                <div className="md:px-6 md:py-0 pb-0 bg-slate-100 md:rounded-b-2xl mb-4 pt-4 px-4 py-0 md:pt-12 md:pb-0 text-left ">
                   <h3 className="text-2xl md:text-4xl pb-2 md:pb-4 font-bold">
                     {selectedProject.title}
                   </h3>
@@ -173,7 +173,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
       </span>
     ))}
   </div>
-                  <div className="py-2  md:py-4">
+                  <div className="py-2  md:py-0 md:pt-4">
                   <Carousel
   showArrows={false}
   showIndicators={false}
