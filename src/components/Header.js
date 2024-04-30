@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="header flex justify-between items-center p-4 relative bg-blue-500">
+    <nav className="header flex justify-between items-center p-4 relative bg-blue-700">
       <div className="flex items-center">
         <img src="/logo.svg" alt="Ryan Designs Logo" className="mr-4" />
       </div>
@@ -41,7 +41,7 @@ const Header = () => {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="absolute top-full left-0 bg-blue-500 w-full p-8 md:hidden z-50">
+        <div className="absolute top-full left-0 bg-slate-900 w-full p-8 md:hidden z-50">
           <ul className="flex flex-col items-center space-y-4">
             <li><Link to="about" smooth={true} duration={500} onClick={() => setIsMenuOpen(false)}>About</Link></li>
             <li><Link to="portfolio" smooth={true} duration={500} onClick={() => setIsMenuOpen(false)}>Projects</Link></li>

@@ -11,7 +11,7 @@ const projects = [
       },
     {
         id: 0,
-        title: "SportsLights for Philips Hue",
+        title: "SportsLights for Hue",
         categories: ["appdev"],
         images: ["images/projects/sportslights/img1.png", "images/projects/sportslights/img2.png", "images/projects/sportslights/img3.png"],
         thumbnail: "images/projects/slthumb.png",

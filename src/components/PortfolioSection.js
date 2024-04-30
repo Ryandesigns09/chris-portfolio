@@ -157,7 +157,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
         <div className="md:col-span-3 order-2 md:order-1">
             {selectedProject ? (
               <>
-                <div className="p-4 md:p-6 pb-0 bg-slate-100 rounded-b-2xl mb-4 pt-4 md:pt-12 text-left ">
+                <div className="p-4 md:p-6 pb-0 bg-slate-100 rounded-2xl md:rounded-b-2xl mb-4 pt-4 md:pt-12 text-left ">
                   <h3 className="text-2xl md:text-4xl pb-2 md:pb-4 font-bold">
                     {selectedProject.title}
                   </h3>
@@ -247,7 +247,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
           </div>
 
           <div className="md:col-span-2 relative order-1 md:order-2">
-            <div className="rounded-b-lg overflow-hidden bg-slate-100 rounded-b-2xl mb-8">
+            <div className="rounded-b-lg overflow-hidden bg-slate-100 rounded-b-2xl mb-0 md:mb-8">
             <div className="sticky top-0 z-10">
               <div className="projectheader text-3xl font-bold text-right p-4 py-2 mb-4 text-white rounded-bl-lg md:ml-40 bg-blue-950">
                 <h4 className="text-lg md:text-2xl">RECENT PROJECTS</h4>
@@ -305,10 +305,10 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
                     <img
                       src={project.thumbnail}
                       alt={project.title}
-                      className="w-24 h-24 object-cover rounded mr-4"
+                      className="w-20 h-20 md:w-24 md:h-24 object-cover rounded mr-4"
                     />
                     <div className="flex flex-col justify-between flex-grow">
-                      <h4 className="text-md md:text-lg font-bold">{project.title}</h4>
+                      <h4 className="text-sm md:text-lg font-bold">{project.title}</h4>
                       <div className="flex flex-wrap gap-1 md:gap-2 mt-1">
                         {project.categories.map((category) => (
                           <span

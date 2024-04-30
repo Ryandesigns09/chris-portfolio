@@ -72,7 +72,7 @@ const ServicesSection = () => {
     <section id="services" className="services">
       <div className="container mx-auto text-center">
         <h2 className="text-2xl md:text-4xl">
-          I'm the <span id="result" onClick={handleResultClick}>{currentService}</span> guy
+          I'm the <span id="result" className="text-blue-800" onClick={handleResultClick}>{currentService}</span> guy
         </h2>
       </div>
     </section>
