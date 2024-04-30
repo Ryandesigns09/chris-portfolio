@@ -233,3 +233,8 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+
+
+div.carousel.carousel-slider > div > ul > li.slide.selected.previous > div > img {
+  display: none;
+}

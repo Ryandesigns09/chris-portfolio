@@ -13,7 +13,7 @@ const projects = [
         id: 0,
         title: "SportsLights for Hue",
         categories: ["appdev"],
-        images: ["images/projects/sportslights/img1.png", "images/projects/sportslights/img2.png", "images/projects/sportslights/img3.png"],
+        images: ["images/projects/sportslights/img5.png", "images/projects/sportslights/img1.png", "images/projects/sportslights/img2.png", "images/projects/sportslights/img3.png"],
         thumbnail: "images/projects/slthumb.png",
         short_description: "I developed an iPhone app that syncs with your Philips Hue lights and triggers based on sports events (goals, runs, etc).\n\nThe app was developed in XCode with a SwiftUI and integrates with Apple's StoreKit2.",
         technologies: ["xcode", "swift"],
@@ -25,19 +25,11 @@ const projects = [
     categories: ["webdev", "graphicdesign", "appdev", "video"],
     images: ["images/projects/rinkrivals/img1.png", "images/projects/rinkrivals/img2.png", "images/projects/rinkrivals/img3.png", "images/projects/rinkrivals/img4.png"],
     thumbnail: "images/projects/rrthumb.png",
-    short_description: "text",
+    short_description: "Rink Rivals was a league I helped create with 4 other players. My job was to be responsive for everything tech and graphic wise.\n\nI developed an entire stat tracking website from the ground up. A discord full of various bot commands & an interactive stream for viewers to watch twice a week.\n\nI also developed an iOS app for the league to easily track all things league related. The app was developed in Xcode with SwiftUI",
     technologies: ["photoshop", "illustrator", "premiere", "aftereffects", "figma", "xcode", "swift","python","obs"],
     video: "https://www.youtube.com/watch?v=d9fIVZnkIHo"
   },
-  {
-    id: 2,
-    title: "Puck Stats",
-    categories: ["appdev"],
-    thumbnail: "images/projects/psthumb.png",
-    images: ["images/projects/puckstats/img1.png", "images/projects/puckstats/img2.png"],
-    short_description: "text",
-    technologies: ["xcode", "swift"]
-  },
+
   {
     id: 3,
     title: "Jack Han - Hockey Tactics",
@@ -56,6 +48,15 @@ const projects = [
     short_description: "For SportsGamer (formally NHLGamer) I have helped assist in various tasks over the years. Everything ranging from stream broadcast design, social media graphics, landing page design/code, video editing & more.\n\nWorking closely with Ken and the rest of the team I utilizied many type of design & web technologies. Two of my biggest positive takeaways from working with SportsGamer has been my coding work on their predicition page as well as my work using Figma working with interactive data.",
     technologies: ["photoshop", "illustrator", "premiere", "aftereffects", "figma", "react"],
     video: "https://www.youtube.com/watch?v=0TDk-216ycg"
+  },
+  {
+    id: 2,
+    title: "Puck Stats",
+    categories: ["appdev"],
+    thumbnail: "images/projects/psthumb.png",
+    images: ["images/projects/puckstats/img3.png","images/projects/puckstats/img1.png", "images/projects/puckstats/img2.png"],
+    short_description: "I developed an iPhone application that interacts with the NHL 24 EASHL Api. Users are able to track their player and club stats quickly and easily.\n\nThe app was developed in Xcode with SwiftUI",
+    technologies: ["xcode", "swift"]
   },
   {
     id: 4,
