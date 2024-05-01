@@ -16,9 +16,21 @@
   align-items: center;
 }
 
+.service {
+  font-family: 'Space Mono', monospace;
+}
+
+
+
 .logo {
   font-family: 'Space Mono', monospace;
   margin-right: 10rem; /* Spacing between logo and nav links */
+}
+
+.carousel .slide img {
+  width: auto !important;
+  margin: auto;
+  text-align: center;
 }
 
 .nav-links {
@@ -43,4 +55,24 @@ cursor: pointer;
   font-size: 0.875rem;
   color: white;
   text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .video-iframe {
+    height: 200px; /* Adjust this height for mobile devices */
+  }
+
+  .carousel .slide iframe {
+    display: inline-block;
+    width: calc(100% - 0px) !important;
+    margin: 0 0px 0px !important;
+    border: 0;
+}
+}
+
+@media screen and (min-width: 769px) {
+  .video-iframe {
+    height: 400px; /* Adjust this height for desktop devices */
+  }
 }

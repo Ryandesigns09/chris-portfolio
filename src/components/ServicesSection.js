@@ -69,8 +69,8 @@ const ServicesSection = () => {
   }, [currentService]); // Effect runs when `currentService` updates
 
   return (
-    <section id="services" className="services">
-      <div className="container mx-auto text-center">
+    <section id="services" className="services z-50">
+      <div className="container mx-auto text-center z-50">
         <h2 className="text-2xl md:text-4xl">
           I'm the <span id="result" className="text-blue-800" onClick={handleResultClick}>{currentService}</span> guy
         </h2>

@@ -10,9 +10,9 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="contact text-white py-8 px-4 md:p-20 text-center" id="contact">
-      <h3 className="text-3xl md:text-4xl font-bold mb-4">Interested in working together?</h3>
-      <h5 className="mb-8 text-lg md:text-xl font-light">Let's connect and discuss how we can bring your ideas to life.</h5>
+    <div className="contact text-white py-6 px-4 md:p-12 text-center" id="contact">
+      <h3 className="text-xl md:text-4xl font-bold mb-4">Interested in working together?</h3>
+      <h5 className="mb-4 md:mb-8 text-sm md:text-xl">Let's connect and discuss how we can bring your ideas to life.</h5>
       <div className="flex justify-center items-center">
         <a href="https://x.com/ryguyx9" target="_blank" rel="noopener noreferrer" className="mr-4">
           <img src="images/twitter.svg" alt="Twitter" className="h-8 w-8 fill-current text-blue-500 hover:text-blue-700 transition duration-300" />

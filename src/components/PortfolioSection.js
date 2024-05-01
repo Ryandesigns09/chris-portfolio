@@ -119,12 +119,10 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
   };
 
   useEffect(() => {
-    // Set the selected project to the first project when the component mounts
     if (projects.length > 0) {
       setSelectedProject(projects[0]);
     }
-  }, []);
-
+  }, [projects]);
 
   
   
@@ -175,69 +173,89 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
   </div>
                   <div className="py-2  md:py-0 md:pt-4">
                   <Carousel
-  showArrows={false}
-  showIndicators={false}
-  swipeable={true}
-  emulateTouch={true}
-  onChange={onChange}
-  useKeyboardArrows={true}
-  onClickItem={onClickItem}
-  onClickThumb={onClickThumb}
->
-  {selectedProject ? (
-    [
-      // Render the video slide with a thumbnail if a video URL is present
-      selectedProject.video && (
-        <div key="video-slide" style={{ position: 'relative' }}>
-          <iframe
-            src={selectedProject.video.replace("watch?v=", "embed/")}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            style={{ width: '90%', height: '400px' }}
-          ></iframe>
-          {/* Thumbnail Image at the bottom */}
-          <img
-            src={`https://img.youtube.com/vi/${selectedProject.video.split('v=')[1].split('&')[0]}/0.jpg`}
-            style={{
-              width: 'auto',
-              height: '40px', // Adjust the height as needed
-              
-            }}
-            alt="Video Thumbnail"
-          />
-        </div>
-      ),
-      // Render images if available
-      ...(selectedProject.images && selectedProject.images.length > 0 ? selectedProject.images.map((image, index) => (
-        <div key={`image-slide-${index}`}>
-          <img src={image} style={{ maxHeight: '550px', width: 'auto', display: 'block', marginLeft: 'auto', marginRight: 'auto' }} />
-        </div>
-      )) : [
-        <div key="placeholder-slide" style={{ width: '100%', height: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <p>No images available</p>
-        </div>
-      ])
-    ].filter(Boolean)
-  ) : (
-    <div key="loading-slide" style={{ width: '100%', height: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <p>Loading project details...</p>
-    </div>
-  )}
-</Carousel>
-
-
+      showArrows={true}
+      showThumbs={true}
+      infiniteLoop={true}
+      verticalSwipe={'natural'}
+      swipeable={true}
+      emulateTouch={true}
+      useKeyboardArrows={true}
+      showIndicators={false}
+      dynamicHeight={false}
+      renderThumbs={() => 
+        [
+          selectedProject.video && (
+            <img key="video-thumb" src={`https://img.youtube.com/vi/${selectedProject.video.split('v=')[1].split('&')[0]}/0.jpg`} style={{ width: '100px', height: '60px', objectFit: 'cover' }} alt="Video Thumbnail" />
+          ),
+          ...selectedProject.images.map((image, index) => (
+            <img key={index} src={image} style={{ width: '100px', height: '60px', objectFit: 'cover' }} alt={`Thumbnail ${index}`} />
+          ))
+        ].filter(Boolean)
+      }
+    >
+      {[
+        selectedProject.video && (
+          <div key="video-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <iframe
+              src={selectedProject.video.replace("watch?v=", "embed/")}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="video-iframe"
+            ></iframe>
+          </div>
+        ),
+        ...selectedProject.images.map((image, index) => (
+          <div key={`image-slide-${index}`} style={{ maxHeight: '550px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src={image} style={{ maxHeight: '550px', maxWidth: '100%', display: 'block' }} alt={`Slide ${index}`} />
+          </div>
+        ))
+      ].filter(Boolean)}
+    </Carousel>
 
                   </div>
                 </div>
-                <div className="p-4 md:p-6 bg-slate-100 rounded-2xl mb-8 text-left ">
+                <div className="p-4 md:p-6 bg-slate-100 rounded-2xl mb-4 text-left ">
                   <h5 className="font-bold text-xl pb-2 text-blue-900">
                     PROJECT DESCRIPTION
                   </h5>
-                  <p className="text-gray-600 text-sm md:text-base" style={{ whiteSpace: "pre-wrap" }}>
+                  <p className="text-xs md:text-xs" style={{ whiteSpace: "pre-wrap" }}>
                     {selectedProject.short_description}
                 </p>          
                 </div>
+                {selectedProject.case_study && (
+                <div className="p-4 md:p-6 bg-slate-100 rounded-2xl mb-8 text-left">
+  <h5 className="font-bold text-xl pb-2 text-blue-900">CASE STUDY</h5>
+  
+<>
+  <div className="flex mb-4">
+    <div className="w-1/4 md:w-1/6">
+      <p className="font-bold pr-0">Challenge:</p>
+    </div>
+    <div className="w-3/4 md:w-5/6">
+      <p>{selectedProject.case_study.challenge}</p>
+    </div>
+  </div>
+  <div className="flex mb-4">
+  <div className="w-1/4 md:w-1/6">
+      <p className="font-bold pr-0">Solution:</p>
+    </div>
+    <div className="w-3/4 md:w-5/6">
+      <p>{selectedProject.case_study.solution}</p>
+    </div>
+  </div>
+  <div className="flex mb-4">
+  <div className="w-1/4 md:w-1/6">
+      <p className="font-bold pr-0">Outcome:</p>
+    </div>
+    <div className="w-3/4 md:w-5/6">
+      <p>{selectedProject.case_study.outcome}</p>
+    </div>
+  </div>
+</>
+
+</div>
+)}
               </>
             ) : (
               <h3 className="text-4xl text-left font-bold">

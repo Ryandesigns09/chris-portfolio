@@ -80,9 +80,6 @@ h1, h2, h3, h4, h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/backgroundarea.png');
-  background-size: cover;
-  background-position: center;
   animation: breathing 6s infinite ease-in-out; /* Adjust the duration and timing function as needed */
 }
 
@@ -132,6 +129,55 @@ h1, h2, h3, h4, h5 {
   font-weight: 300; /* This corresponds to a lighter font weight */
 }
 
+.animated-bg {
+  position: absolute;
+  width: 350px; /* Adjust size as needed */
+  height: 350px; /* Adjust size as needed */
+  background-size: cover;
+  animation: moveUpDown 5s infinite alternate;
+}
+
+
+.animated-bg-up {
+  position: absolute;
+  width: 350px; /* Adjust size as needed */
+  height: 350px; /* Adjust size as needed */
+  background-size: cover;
+  animation: moveUp 5s infinite alternate;
+}
+
+.bottom-left {
+  bottom: -50px;
+  left: -120px;
+  z-index: 99;
+  background-image: url('images/gridlines.svg');
+}
+
+.top-right {
+  top: 40px;
+  right: 220px;
+  z-index: 9;
+  background-image: url('images/dots.svg');
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 
 .gradient-bottom {
   position: absolute;
@@ -151,7 +197,7 @@ h1, h2, h3, h4, h5 {
   width: 105%;
   margin-left: -50px;
   margin-top: -39px;
-  box-shadow: 0px 0px 30px #dfe1fe;
+  box-shadow: 0px -25px 75px #000766a6;
 }
 
 .services .container h2 {
@@ -187,7 +233,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .projects-area {
-  max-height: 698px;
+  max-height: 670px;
 }
 
 .cursor-grab { cursor: grab; }
@@ -198,12 +244,59 @@ h1, h2, h3, h4, h5 {
   display: none; /* Hide by default on non-mobile screens */
 }
 
+
+.header-text {
+  line-height: 120px;
+}
+
+.carousel .slide iframe {
+  width: calc(100% - 0px) !important;
+  margin: 0 0px 0px !important;
+}
+
 @media (max-width: 768px) {
   .services {
     width: 100%;
     margin-left:0px;
-    box-shadow: 0px 0px 20px #dfe1fe;
+    box-shadow: 0px -25px 35px #2f3582;
 
+  }
+
+
+.animated-bg {
+  position: absolute;
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  background-size: cover;
+  animation: moveUpDown 5s infinite alternate;
+}
+
+
+.animated-bg-up {
+  position: absolute;
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  background-size: cover;
+  animation: moveUp 5s infinite alternate;
+}
+
+.bottom-left {
+  bottom: -50px;
+  left: -120px;
+  z-index: 99;
+  background-image: url('images/gridlines.svg');
+}
+
+.top-right {
+  top:50px;
+  right: -80px;
+  z-index: 9;
+  background-image: url('images/dots.svg');
+}
+
+
+  .header-text {
+    line-height: 62px;
   }
 
 

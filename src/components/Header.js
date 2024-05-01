@@ -25,7 +25,7 @@ const Header = () => {
       </div>
       <div className="flex items-center">
         <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer"
-           className="hidden sm:inline-block text-white font-bold py-2 px-4 border border-white rounded-full md:ml-20">
+           className="hidden sm:inline-block text-white font-bold py-1 px-4 border border-white rounded-full md:ml-20">
           Download CV
         </a>
         <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer"
