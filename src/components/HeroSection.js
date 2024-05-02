@@ -28,7 +28,7 @@ const HeroSection = () => {
                         <button onClick={handleWorkWithMeClick} className="text-white text-sm md:text-lg py-2 space px-3 md:px-4 border font-bold border-white hover:scale-105 hover:bg-white hover:text-blue-900 rounded-full transition duration-500">
                             <FontAwesomeIcon icon={faBriefcase} className="mr-0 md:mr-2" /> Work with me
                         </button>
-                        <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer" className="ml-3 md:ml-4 text-blue-900 text-sm md:text-lg space py-2 px-3 md:px-4 border font-bold bg-white border-white rounded-full hover:bg-transparent hover:text-white hover:border-white  hover:scale-110 transition duration-500">
+                        <a href="/CRyanResume.pdf" target="_blank" rel="noopener noreferrer" className="ml-3 md:ml-4 text-blue-900 text-sm md:text-lg space py-2 px-3 md:px-4 border font-bold bg-white border-white rounded-full hover:bg-transparent hover:text-white hover:border-white  hover:scale-110 transition duration-500">
                             <FontAwesomeIcon icon={faFileDownload} className="mr-0 md:mr-2" /> Download CV
                         </a>
                     </div>
