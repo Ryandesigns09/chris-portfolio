@@ -1,13 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client'; // Corrected import for React 18
-import './index.css'; // Ensures Tailwind CSS is loaded
+import ReactDOM from 'react-dom/client';
+import './index.css';
 import App from './App';
-import 'react-tooltip/dist/react-tooltip.css'
+import 'react-tooltip/dist/react-tooltip.css';
+import { HelmetProvider } from 'react-helmet-async';
 
-
-const root = ReactDOM.createRoot(document.getElementById('root')); // Using the new root API
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <HelmetProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </HelmetProvider>
 );
