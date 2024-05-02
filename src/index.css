@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5 {
   font-family: 'Space Mono', monospace;
 }
 
+.space {
+  font-family: 'Space Mono', monospace;
+}
+
 .meimage {
   margin-left:-100px;
   z-index: 49;
@@ -233,7 +237,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .projects-area {
-  max-height: 670px;
+  max-height: 680px;
 }
 
 .cursor-grab { cursor: grab; }
@@ -246,9 +250,19 @@ h1, h2, h3, h4, h5 {
 
 
 .header-text {
-  line-height: 120px !important;
+  line-height: 100px !important;
 }
 
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+}
+
+.toolie {
+  margin-left:25px;
+}
 .carousel .slide iframe {
   width: calc(100% - 0px) !important;
   margin: 0 0px 0px !important;
@@ -261,6 +275,13 @@ h1, h2, h3, h4, h5 {
     box-shadow: 0px -25px 35px #2f3582;
 
   }
+
+
+
+  .toolie {
+    margin-left: -150px;
+    font-size: 10px;
+}
 
 
 .animated-bg {
@@ -314,7 +335,7 @@ h1, h2, h3, h4, h5 {
   }
   
   .nav-links {
-    display: none; /* Hide by default on mobile screens */
+    display: none !important; /* Hide by default on mobile screens */
   }
 
   .nav-links.mobile-menu-open {
@@ -334,4 +355,14 @@ h1, h2, h3, h4, h5 {
 
 div.carousel.carousel-slider > div > ul > li.slide.selected.previous > div > img {
   display: none;
+}
+
+.menu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.menu-container.open {
+  max-height: 500px; /* Adjust this value as needed */
 }

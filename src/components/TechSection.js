@@ -100,12 +100,12 @@ const TechStack = () => {
   return (
     <section className="flex bg-slate-900 text-white z-50 overflow-visible">
       <div className="p-4 bg-blue-700 flex items-center">
-        <h2 className="font-bold text-xs md:text-2xl text-white text-left md:pl-40">Applications & Tech Used</h2>
+        <h2 className="font-bold text-xs md:text-2xl text-white text-left md:pl-64">Applications & Tech Used</h2>
       </div>
       <div className="w-full md:w-3/4 relative flex items-center overflow-y-visible">
         <div {...bind()} ref={scrollContainer} className="flex overflow-auto hide-scroll-bar p-4 cursor-grab">
           {technologies.map((tech, index) => (
-            <div key={index} className="group relative flex-shrink-0 p-2 w-10 min-w-16 md:min-w-36" 
+            <div key={index} className="group relative flex-shrink-0 hover:scale-110 transition-transform duration-300 p-2 w-10 min-w-16 md:min-w-36" 
               onMouseEnter={(e) => handleMouseEnter(tech, e)}
               onMouseLeave={handleMouseLeave}>
               <div className="flex items-center justify-center bg-black rounded-lg p-2 w-10 h-10 md:w-16 md:h-16">

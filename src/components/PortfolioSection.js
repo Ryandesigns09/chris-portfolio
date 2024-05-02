@@ -150,13 +150,13 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
 
   return (
     <div className="portfolio" id="portfolio">
-      <div className="max-w-7xl mx-auto px-4 my-10">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 my-5 md:my-10">
+        <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8 gap-4">
         <div className="md:col-span-3 order-2 md:order-1">
             {selectedProject ? (
               <>
-                <div className="md:px-6 md:py-0 pb-0 bg-slate-100 md:rounded-2xl mb-4 pt-4 px-4 py-0 md:pt-8 md:pb-0 text-left ">
-                  <h3 className="text-2xl md:text-4xl pb-2 md:pb-4 font-extrabold">
+                <div className="md:px-6 md:py-0 pb-4 bg-slate-100 rounded-2xl mb-4 pt-4 px-4 py-0 md:pt-6 md:pb-4 text-left ">
+                  <h3 className="text-2xl md:text-4xl pb-2 md:pb-4 tracking-tight font-extrabold">
                     {selectedProject.title}
                   </h3>
                   <div className="flex flex-wrap gap-2 mb-2"> {/* Added margin-bottom for spacing */}
@@ -216,16 +216,16 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
                   </div>
                 </div>
                 <div className="p-4 md:p-6 bg-slate-100 rounded-2xl mb-4 text-left ">
-                  <h5 className="font-bold text-lg pb-2 text-blue-900">
+                  <h5 className="font-bold text-lg pb-2 text-blue-950 tracking-tight">
                     PROJECT DESCRIPTION
                   </h5>
-                  <p className="text-sm md:text-sm" style={{ whiteSpace: "pre-wrap" }}>
+                  <p className="text-sm md:text-sm text-gray-700" style={{ whiteSpace: "pre-wrap" }}>
                     {selectedProject.short_description}
                 </p>          
                 </div>
                 {selectedProject.case_study && (
-                <div className="p-4 md:p-6 bg-slate-100 rounded-2xl mb-8 text-left">
-  <h5 className="font-bold text-lg pb-2 text-blue-900">CASE STUDY</h5>
+                <div className="p-4 md:p-6 bg-slate-100 text-gray-700 rounded-2xl mb-8 text-left">
+  <h5 className="font-bold text-lg pb-2 text-blue-950 tracking-tight">CASE STUDY</h5>
   
 <>
   <div className="flex mb-4">
@@ -313,11 +313,11 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
                 {filteredProjects.map((project, index) => (
                   <div
                     key={index}
-                    className={`cursor-pointer transition duration-300 transform hover:scale-105 rounded-xl p-2 flex ${
+                    className={`cursor-pointer transition duration-300 transform hover:scale-105 hover:bg-slate-100 rounded-xl p-2 flex ${
                       selectedProject === project
                         ? 'bg-slate-200'
                         : 'bg-white'
-                    } shadow-lg border border-gray-100 hover:border-blue-200`}
+                    } shadow-lg border border-gray-100 hover:border-slate-300`}
                     onClick={() => setSelectedProject(project)}
                   >
                     <img
@@ -326,7 +326,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
                       className="w-20 h-20 md:w-24 md:h-24 object-cover rounded mr-4"
                     />
                     <div className="flex flex-col justify-between flex-grow">
-                      <h4 className="text-sm md:text-lg font-bold">{project.title}</h4>
+                      <h4 className="text-sm md:text-lg font-bold tracking-tight">{project.title}</h4>
                       <div className="flex flex-wrap gap-1 md:gap-2">
                         {project.categories.map((category) => (
                           <span

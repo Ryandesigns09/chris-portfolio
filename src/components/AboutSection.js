@@ -18,7 +18,7 @@ const AboutMe = () => {
     { 
       icon: "images/ui.svg", // Path to custom SVG icon
       title: "UI/UX",
-      description: "User interface design, prototyping, testing",
+      description: "User interface design, prototyping, a/b testing",
       years: 8
     },
     { 
@@ -30,10 +30,10 @@ const AboutMe = () => {
   ];
 
   return (
-    <section id="about" className="bg-white pt-4 md:py-10">
+    <section id="about" className="bg-white pt-0 md:pt-4 md:py-10">
       <div className="container mx-auto pt-10 px-4 md:px-6 lg:px-36">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="md:col-span-3 order-1 md:order-2 bg-slate-100 p-6 rounded-xl">
+          <div className="md:col-span-3 order-1 md:order-2 bg-slate-100 md:p-6 p-4 rounded-xl">
           <h3 className="text-xl md:text-2xl text-left font-bold mb-4">About Me</h3>
             <p className="text-gray-700 text-sm md:text-base mb-0 text-left">
               With over two decades of expertise in design and web development, my enthusiasm for creativity fuels my work across various fields. My journey spans from sports design, stream production & everywhere in between. When bringing concepts to life I utilize tools such as Photoshop, InDesign, Figma, Illustrator, Procreate, After Effects, Premiere & Character Creator.
@@ -42,14 +42,16 @@ const AboutMe = () => {
               <br /><br />
               I am always committed to staying at the forefront of my field, continuously exploring new technologies, trends and techniques to add to my skillset. With every job my goal is always to get a "Wow, this is amazing!" from clients.
             </p>
+            <img src="images/sig.svg" className="mt-6 h-8 md:h-12" alt="Sig"/>
+            <p className=" mt-2 text-left text-xs">Chris Ryan</p>
           </div>
-          <div className="md:col-span-1 order-2 md:order-1 bg-slate-100 px-4 pt-6 pb-2 mb-8 md:mb-0 rounded-xl text-left">
+          <div className="md:col-span-1 order-2 md:order-1 bg-slate-100 px-4 pt-4 md:pt-6 pb-2 mb-8 md:mb-0 rounded-xl text-left">
             <h3 className="text-xl md:text-2xl text-center font-bold mb-4">Services Offered</h3>
             {services.map(service => (
-              <div key={service.title} className="mb-4 flex items-center hover:scale-105 bg-white rounded-xl px-3  py-2 transition-transform grayscale hover:grayscale-0 duration-300 cursor-pointer">
+              <div key={service.title} className="mb-4 flex items-center hover:scale-105 bg-white rounded-xl px-3  py-2 grayscale hover:grayscale-0 transition-transform duration-300">
                 <img src={service.icon} alt={service.title} className="w-12 h-12 mr-4 filter  group-hover:grayscale-0" />
                 <div className="flex-grow">
-                  <div className="text-sm md:text-lg font-semibold service">{service.title}</div>
+                  <div className="text-sm md:text-lg font-semibold tracking-tight service">{service.title}</div>
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
               </div>
