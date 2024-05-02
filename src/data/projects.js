@@ -58,7 +58,7 @@ const projects = [
     title: "SportsGamer",
     categories: ["webdev", "graphicdesign","video"],
     thumbnail: "images/projects/sgthumb.png",
-    images: ["images/projects/sg/img1.jpg", "images/projects/sg/img2.jpg", "images/projects/sg/img3.jpg", "images/projects/sg/img4.jpg", "images/projects/sg/img5.jpg", "images/projects/sg/img6.jpg", "images/projects/sg/img7.jpg", "images/projects/sg/img8.jpg", "images/projects/sg/img9.jpg", "images/projects/sg/img10.jpg", "images/projects/sg/img15.jpg", "images/projects/sg/img12.jpg", "images/projects/sg/img13.jpg", "images/projects/sg/img14.jpg"],
+    images: ["images/projects/sg/img1.jpg", "images/projects/sg/img2.jpg", "images/projects/sg/img3.jpg", "images/projects/sg/img4.jpg", "images/projects/sg/img5.jpg", "images/projects/sg/img6.jpg", "images/projects/sg/img7.jpg", "images/projects/sg/img8.jpg", "images/projects/sg/img9.jpg", "images/projects/sg/img15.jpg", "images/projects/sg/img12.jpg", "images/projects/sg/img13.jpg", "images/projects/sg/img14.jpg"],
     short_description: "For SportsGamer (formally NHLGamer) I have helped assist in various tasks over the years. Everything ranging from stream broadcast design, social media graphics, landing page design/code, video editing & more.\n\nWorking closely with Ken and the rest of the team I utilizied many type of design & web technologies. Two of my biggest positive takeaways from working with SportsGamer has been my coding work on their predicition page as well as my work using Figma working with interactive data.",
     technologies: ["photoshop", "illustrator", "premiere", "aftereffects", "figma", "react"],
     video: "https://www.youtube.com/watch?v=0TDk-216ycg",
