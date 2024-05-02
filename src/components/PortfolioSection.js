@@ -150,12 +150,12 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
 
   return (
     <div className="portfolio" id="portfolio">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 my-10">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
         <div className="md:col-span-3 order-2 md:order-1">
             {selectedProject ? (
               <>
-                <div className="md:px-6 md:py-0 pb-0 bg-slate-100 md:rounded-b-2xl mb-4 pt-4 px-4 py-0 md:pt-8 md:pb-0 text-left ">
+                <div className="md:px-6 md:py-0 pb-0 bg-slate-100 md:rounded-2xl mb-4 pt-4 px-4 py-0 md:pt-8 md:pb-0 text-left ">
                   <h3 className="text-2xl md:text-4xl pb-2 md:pb-4 font-extrabold">
                     {selectedProject.title}
                   </h3>
@@ -216,16 +216,16 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
                   </div>
                 </div>
                 <div className="p-4 md:p-6 bg-slate-100 rounded-2xl mb-4 text-left ">
-                  <h5 className="font-bold text-xl pb-2 text-blue-900">
+                  <h5 className="font-bold text-lg pb-2 text-blue-900">
                     PROJECT DESCRIPTION
                   </h5>
-                  <p className="text-xs md:text-xs" style={{ whiteSpace: "pre-wrap" }}>
+                  <p className="text-sm md:text-sm" style={{ whiteSpace: "pre-wrap" }}>
                     {selectedProject.short_description}
                 </p>          
                 </div>
                 {selectedProject.case_study && (
                 <div className="p-4 md:p-6 bg-slate-100 rounded-2xl mb-8 text-left">
-  <h5 className="font-bold text-xl pb-2 text-blue-900">CASE STUDY</h5>
+  <h5 className="font-bold text-lg pb-2 text-blue-900">CASE STUDY</h5>
   
 <>
   <div className="flex mb-4">
@@ -244,7 +244,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
       <p>{selectedProject.case_study.solution}</p>
     </div>
   </div>
-  <div className="flex mb-4">
+  <div className="flex">
   <div className="w-1/4 md:w-1/6">
       <p className="font-bold pr-0">Outcome:</p>
     </div>
@@ -265,9 +265,9 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
           </div>
 
           <div className="md:col-span-2 relative order-1 md:order-2">
-            <div className="rounded-b-lg overflow-hidden bg-slate-100 rounded-b-2xl mb-0 md:mb-8">
+            <div className=" overflow-hidden bg-slate-100 rounded-2xl mb-0 md:mb-8">
             <div className="sticky top-0 z-10">
-              <div className="projectheader text-3xl font-bold text-right p-4 py-2 mb-4 text-white rounded-bl-lg ml-40 bg-blue-950">
+              <div className="projectheader text-3xl font-bold text-right p-4 py-2 mb-4 text-white rounded-bl-lg ml-40 bg-slate-900">
                 <h4 className="text-lg md:text-2xl">RECENT PROJECTS</h4>
               </div>
               <div className="flex justify-center space-x-3 mb-6 mt-6">
@@ -315,7 +315,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
                     key={index}
                     className={`cursor-pointer transition duration-300 transform hover:scale-105 rounded-xl p-2 flex ${
                       selectedProject === project
-                        ? 'bg-gray-100'
+                        ? 'bg-slate-200'
                         : 'bg-white'
                     } shadow-lg border border-gray-100 hover:border-blue-200`}
                     onClick={() => setSelectedProject(project)}
@@ -356,7 +356,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
               
             </div>
             {/* Add gradient effect here */}
-            <div className="gradient-bottom"></div>
+            
           </div>
         </div>
         </div>

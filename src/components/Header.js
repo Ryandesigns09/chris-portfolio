@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="header flex justify-between items-center relative bg-blue-700">
+    <nav className="header flex justify-between items-center relative bg-blue-700 shadow-lg z-50">
       <div className="flex items-center">
         <img src="/logo.svg" alt="Ryan Designs Logo"/>
       </div>

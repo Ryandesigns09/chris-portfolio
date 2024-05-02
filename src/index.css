@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5 {
 
 
 .header-text {
-  line-height: 120px;
+  line-height: 120px !important;
 }
 
 .carousel .slide iframe {
@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5 {
 
 
   .header-text {
-    line-height: 62px;
+    line-height: 62px !important;
   }
 
 
