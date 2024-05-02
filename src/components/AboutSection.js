@@ -30,7 +30,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <section id="about" className="bg-white pt-0 md:pt-4 md:py-10">
+    <section id="about" className="bg-white pt-0 md:pt-8 md:py-10">
       <div className="container mx-auto pt-10 px-4 md:px-6 lg:px-36">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="md:col-span-3 order-1 md:order-2 bg-slate-100 md:p-6 p-4 rounded-xl">

@@ -5,6 +5,7 @@ import PortfolioSection from './components/PortfolioSection';
 import ContactSection from './components/ContactSection';
 import ServicesSection from './components/ServicesSection';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import TechSection from './components/TechSection';
 import AboutSection from './components/AboutSection';
@@ -25,8 +26,8 @@ function App() {
         <AboutSection />
         <TechSection />
         <PortfolioSection />
-        <Analytics />
-
+                <Analytics />
+                <SpeedInsights />
         <ContactSection />
       </main>
       <Footer />
