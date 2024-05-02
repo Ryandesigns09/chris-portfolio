@@ -4,11 +4,14 @@ import HeroSection from './components/HeroSection';
 import PortfolioSection from './components/PortfolioSection';
 import ContactSection from './components/ContactSection';
 import ServicesSection from './components/ServicesSection';
+import { Analytics } from '@vercel/analytics/react';
+
 import TechSection from './components/TechSection';
 import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
 import './index.css'; // Make sure this import stays to apply global styles
 import './App.css'; // Make sure this import stays to apply global styles
+
 
 
 
@@ -22,9 +25,12 @@ function App() {
         <AboutSection />
         <TechSection />
         <PortfolioSection />
+        <Analytics />
+
         <ContactSection />
       </main>
       <Footer />
+      
     </div>
   );
 }
