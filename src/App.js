@@ -4,6 +4,10 @@ import HeroSection from './components/HeroSection';
 import PortfolioSection from './components/PortfolioSection';
 import ContactSection from './components/ContactSection';
 import ServicesSection from './components/ServicesSection';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
+
 import TechSection from './components/TechSection';
 import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
@@ -29,6 +33,8 @@ function App() {
         <TechSection />
         <PortfolioSection />
         <ContactSection />
+        <Analytics />
+        <SpeedInsights />
       </main>
       <Footer />
     </div>
