@@ -16,7 +16,6 @@ const projects = [
         thumbnail: "images/projects/slthumb.webp",
         short_description: "I developed an iPhone app that syncs with your Philips Hue lights and triggers based on sports events (goals, runs, etc).\n\nThe app was developed in XCode with a SwiftUI and integrates with Apple's StoreKit2.",
         technologies: ["xcode", "swift"],
-        video: "https://www.youtube.com/watch?v=7SdCrFHtrEM",
         case_study: {
           challenge: "Synchronizing a mobile app with Philips Hue lights in real-time based on sports event triggers.",
           solution: "Using SwiftUI for a smooth user interface and integrating with Apple's StoreKit2 for subscription management, while ensuring real-time communication between the app and the lighting hardware.",
