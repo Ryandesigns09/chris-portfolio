@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5 {
 
 .chris {
   font-family: 'Space Mono', monospace;
-  background-image: url('images/circle.png');
+  background-image: url('images/circle.webp');
   background-size: contain;
   font-weight: regular;
   letter-spacing: -4px;

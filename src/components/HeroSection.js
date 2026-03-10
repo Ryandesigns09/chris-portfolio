@@ -36,7 +36,7 @@ const HeroSection = () => {
                     {showTooltip && <span className="absolute -mb-10 text-xs le bg-black text-white px-1 ml-0 rounded-b shadow-lg toolie">Copied email to clipboard</span>}
                 </div>
                 <div className="image-container hidden md:block w-full md:w-1/2 text-right align-right z-10">
-                    <img src="images/me.png" alt="Chris" className="w-3/4 right float-right" />
+                    <img src="images/me.webp" alt="Chris" className="w-3/4 right float-right" />
                 </div>
             </div>
             <div className="animated-bg bottom-left"></div>

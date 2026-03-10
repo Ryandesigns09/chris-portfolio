@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 import projects from '../data/projects';
-import photoshopIcon from '../images/icons/photoshop.png';
-import illustratorIcon from '../images/icons/illustrator.png';
-import figmaIcon from '../images/icons/figma.png';
-import xcodeIcon from '../images/icons/xcode.png';
-import swiftIcon from '../images/icons/swift.png';
-import premiereIcon from '../images/icons/premiere.png';
-import aftereffectsIcon from '../images/icons/aftereffects.png';
-import indesignIcon from '../images/icons/indesign.png';
-import pythonIcon from '../images/icons/python.png';
-import obsIcon from '../images/icons/obs.png';
-import wordpressIcon from '../images/icons/wordpress.png';
-import reactIcon from '../images/icons/react.png';
+import photoshopIcon from '../images/icons/photoshop.webp';
+import illustratorIcon from '../images/icons/illustrator.webp';
+import figmaIcon from '../images/icons/figma.webp';
+import xcodeIcon from '../images/icons/xcode.webp';
+import swiftIcon from '../images/icons/swift.webp';
+import premiereIcon from '../images/icons/premiere.webp';
+import aftereffectsIcon from '../images/icons/aftereffects.webp';
+import indesignIcon from '../images/icons/indesign.webp';
+import pythonIcon from '../images/icons/python.webp';
+import obsIcon from '../images/icons/obs.webp';
+import wordpressIcon from '../images/icons/wordpress.webp';
+import reactIcon from '../images/icons/react.webp';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import css for the carousel
 
@@ -94,7 +94,7 @@ const PortfolioSection = () => {
       react: reactIcon,
       wordpress: wordpressIcon,
     };
-    return techIcons[technology] || 'images/placeholder.png';
+    return techIcons[technology] || 'images/placeholder.webp';
   };
 
   useEffect(() => {

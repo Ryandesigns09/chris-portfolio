@@ -22,7 +22,7 @@ function App() {
         <title>RyanDesigns | A collection of my app, web, and creative design work.</title>
         <meta property="og:title" content="RyanDesigns" />
         <meta property="og:description" content="A collection of my app, web, and creative design work." />
-        <meta property="og:image" content="images/og.png" />
+        <meta property="og:image" content="images/og.webp" />
         <meta property="og:url" content="https://ryandesigns.ca/" />
       </Helmet>
       <Header />
