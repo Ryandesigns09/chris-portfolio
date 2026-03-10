@@ -71,6 +71,7 @@ const useDraggableScroll = (ref) => {
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const projectsRef = useRef(null);
 
   useDraggableScroll(projectsRef);
@@ -162,6 +163,7 @@ const PortfolioSection = () => {
       useKeyboardArrows={true}
       showIndicators={false}
       dynamicHeight={false}
+      onChange={(index) => setCurrentSlide(index)}
       renderThumbs={() =>
         [
           selectedProject.video && (
@@ -173,26 +175,47 @@ const PortfolioSection = () => {
         ].filter(Boolean)
       }
     >
-      {[
-        selectedProject.video && (
-          <div key="video-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <iframe
-              title={selectedProject.title}
-              src={selectedProject.video.replace("watch?v=", "embed/")}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="video-iframe"
-              loading="lazy"
-            ></iframe>
-          </div>
-        ),
-        ...selectedProject.images.map((image, index) => (
-          <div key={`image-slide-${index}`} style={{ maxHeight: '550px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={image} style={{ maxHeight: '550px', maxWidth: '100%', display: 'block' }} alt={`Slide ${index}`} loading={index === 0 ? 'eager' : 'lazy'} />
-          </div>
-        ))
-      ].filter(Boolean)}
+      {(() => {
+        const allSlides = [
+          selectedProject.video ? 'video' : null,
+          ...selectedProject.images
+        ].filter(Boolean);
+        const totalSlides = allSlides.length;
+        return allSlides.map((slide, index) => {
+          const distance = Math.min(
+            Math.abs(currentSlide - index),
+            totalSlides - Math.abs(currentSlide - index)
+          );
+          const shouldLoad = distance <= 1;
+          if (slide === 'video') {
+            return (
+              <div key="video-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {shouldLoad ? (
+                  <iframe
+                    title={selectedProject.title}
+                    src={selectedProject.video.replace("watch?v=", "embed/")}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="video-iframe"
+                  ></iframe>
+                ) : (
+                  <div style={{ width: '100%', height: '400px', background: '#e2e8f0' }} />
+                )}
+              </div>
+            );
+          }
+          return (
+            <div key={`image-slide-${index}`} style={{ maxHeight: '550px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {shouldLoad ? (
+                <img src={slide} style={{ maxHeight: '550px', maxWidth: '100%', display: 'block' }} alt={`Slide ${index}`} />
+              ) : (
+                <div style={{ width: '100%', height: '400px', background: '#e2e8f0' }} />
+              )}
+            </div>
+          );
+        });
+      })()}
     </Carousel>
 
                   </div>
@@ -300,7 +323,7 @@ const PortfolioSection = () => {
                         ? 'bg-slate-200'
                         : 'bg-white'
                     } shadow-lg border border-gray-100 hover:border-slate-300`}
-                    onClick={() => setSelectedProject(project)}
+                    onClick={() => { setSelectedProject(project); setCurrentSlide(0); }}
                   >
                     <img
                       src={project.thumbnail}
