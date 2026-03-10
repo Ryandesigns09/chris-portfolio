@@ -163,6 +163,7 @@ const PortfolioSection = () => {
       useKeyboardArrows={true}
       showIndicators={false}
       dynamicHeight={false}
+      selectedItem={currentSlide}
       onChange={(index) => setCurrentSlide(index)}
       renderThumbs={() =>
         [
