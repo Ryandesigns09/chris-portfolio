@@ -28,10 +28,10 @@ function App() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <AboutSection />
         <ScrollReveal>
-          <AboutSection />
+          <TechSection />
         </ScrollReveal>
-        <TechSection />
         <ScrollReveal>
           <PortfolioSection />
         </ScrollReveal>

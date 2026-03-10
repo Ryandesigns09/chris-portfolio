@@ -135,12 +135,24 @@ const PortfolioSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8 gap-4">
         <div className="md:col-span-3 order-2 md:order-1">
             {selectedProject ? (
-              <>
-                <div className="md:px-6 md:py-0 pb-4 bg-slate-100 rounded-2xl mb-4 pt-4 px-4 py-0 md:pt-6 md:pb-4 text-left ">
-                  <h3 className="text-2xl md:text-4xl pb-2 md:pb-4 tracking-tight font-extrabold">
-                    {selectedProject.title}
-                  </h3>
-                  <div className="flex flex-wrap gap-2 mb-2"> {/* Added margin-bottom for spacing */}
+              <div key={selectedProject.id} className="animate-fadeIn">
+                <div className="md:px-6 md:py-0 pb-4 bg-slate-100 rounded-2xl mb-4 pt-4 px-4 py-0 md:pt-6 md:pb-4 text-left">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-2xl md:text-4xl pb-2 md:pb-0 tracking-tight font-extrabold">
+                      {selectedProject.title}
+                    </h3>
+                    <div className="flex space-x-1">
+                      {selectedProject.technologies.map((tech) => (
+                        <img
+                          key={tech}
+                          src={getTechnologyIcon(tech)}
+                          alt={tech}
+                          className="h-5 w-5 md:h-7 md:w-7 opacity-60"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-2">
     {selectedProject.categories.map((category) => (
       <span
         key={category}
@@ -262,7 +274,7 @@ const PortfolioSection = () => {
 
 </div>
 )}
-              </>
+              </div>
             ) : (
               <h3 className="text-4xl text-left font-bold">
                 Select a project to view details
@@ -277,36 +289,25 @@ const PortfolioSection = () => {
                 <h4 className="text-lg md:text-2xl">RECENT PROJECTS</h4>
               </div>
               <div className="flex justify-center space-x-3 mb-6 mt-6">
-                <button
-                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-blue-950 hover:text-white transition duration-300"
-                  onClick={() => setActiveCategory('all')}
-                >
-                  All
-                </button>
-                <button
-                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-blue-500 hover:border-blue-500 hover:text-white transition duration-300"
-                  onClick={() => setActiveCategory('webdev')}
-                >
-                  Web Dev
-                </button>
-                <button
-                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-red-500 hover:border-red-500 hover:text-white transition duration-300"
-                  onClick={() => setActiveCategory('appdev')}
-                >
-                  App Dev
-                </button>
-                <button
-                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-orange-500 hover:border-orange-500 hover:text-white transition duration-300"
-                  onClick={() => setActiveCategory('graphicdesign')}
-                >
-                  Design
-                </button>
-                <button
-                  className="px-2 md:px-3 py-1 text-xs uppercase border border-blue-950 text-blue-950 rounded hover:bg-emerald-500 hover:border-emerald-500 hover:text-white transition duration-300"
-                  onClick={() => setActiveCategory('video')}
-                >
-                  Video
-                </button>
+                {[
+                  { key: 'all', label: 'All', activeColor: 'bg-blue-950 border-blue-950 text-white', hoverColor: 'hover:bg-blue-950 hover:text-white' },
+                  { key: 'webdev', label: 'Web Dev', activeColor: 'bg-blue-500 border-blue-500 text-white', hoverColor: 'hover:bg-blue-500 hover:border-blue-500 hover:text-white' },
+                  { key: 'appdev', label: 'App Dev', activeColor: 'bg-red-500 border-red-500 text-white', hoverColor: 'hover:bg-red-500 hover:border-red-500 hover:text-white' },
+                  { key: 'graphicdesign', label: 'Design', activeColor: 'bg-orange-500 border-orange-500 text-white', hoverColor: 'hover:bg-orange-500 hover:border-orange-500 hover:text-white' },
+                  { key: 'video', label: 'Video', activeColor: 'bg-emerald-500 border-emerald-500 text-white', hoverColor: 'hover:bg-emerald-500 hover:border-emerald-500 hover:text-white' },
+                ].map(({ key, label, activeColor, hoverColor }) => (
+                  <button
+                    key={key}
+                    className={`px-2 md:px-3 py-1 text-xs uppercase border rounded transition duration-300 ${
+                      activeCategory === key
+                        ? activeColor
+                        : `border-blue-950 text-blue-950 ${hoverColor}`
+                    }`}
+                    onClick={() => setActiveCategory(key)}
+                  >
+                    {label}
+                  </button>
+                ))}
               </div>
             </div>
 
