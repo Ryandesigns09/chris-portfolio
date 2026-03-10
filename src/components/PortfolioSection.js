@@ -162,13 +162,13 @@ const PortfolioSection = () => {
       useKeyboardArrows={true}
       showIndicators={false}
       dynamicHeight={false}
-      renderThumbs={() => 
+      renderThumbs={() =>
         [
           selectedProject.video && (
-            <img key="video-thumb" src={`https://img.youtube.com/vi/${selectedProject.video.split('v=')[1].split('&')[0]}/0.jpg`} style={{ width: '100px', height: '60px', objectFit: 'cover' }} alt="Video Thumbnail" />
+            <img key="video-thumb" src={`https://img.youtube.com/vi/${selectedProject.video.split('v=')[1].split('&')[0]}/0.jpg`} style={{ width: '100px', height: '60px', objectFit: 'cover' }} alt="Video Thumbnail" loading="lazy" />
           ),
           ...selectedProject.images.map((image, index) => (
-            <img key={index} src={image} style={{ width: '100px', height: '60px', objectFit: 'cover' }} alt={`Thumbnail ${index}`} />
+            <img key={index} src={image} style={{ width: '100px', height: '60px', objectFit: 'cover' }} alt={`Thumbnail ${index}`} loading="lazy" />
           ))
         ].filter(Boolean)
       }
@@ -183,12 +183,13 @@ const PortfolioSection = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="video-iframe"
+              loading="lazy"
             ></iframe>
           </div>
         ),
         ...selectedProject.images.map((image, index) => (
           <div key={`image-slide-${index}`} style={{ maxHeight: '550px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={image} style={{ maxHeight: '550px', maxWidth: '100%', display: 'block' }} alt={`Slide ${index}`} />
+            <img src={image} style={{ maxHeight: '550px', maxWidth: '100%', display: 'block' }} alt={`Slide ${index}`} loading={index === 0 ? 'eager' : 'lazy'} />
           </div>
         ))
       ].filter(Boolean)}
@@ -305,6 +306,7 @@ const PortfolioSection = () => {
                       src={project.thumbnail}
                       alt={project.title}
                       className="w-20 h-20 md:w-24 md:h-24 object-cover rounded mr-4"
+                      loading="lazy"
                     />
                     <div className="flex flex-col justify-between flex-grow">
                       <h4 className="text-sm md:text-lg font-bold tracking-tight">{project.title}</h4>
