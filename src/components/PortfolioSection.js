@@ -15,7 +15,6 @@ import wordpressIcon from '../images/icons/wordpress.png';
 import reactIcon from '../images/icons/react.png';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import css for the carousel
-import ModalImage from 'react-modal-image';
 
 const useDraggableScroll = (ref) => {
     const [isDragging, setIsDragging] = useState(false);
@@ -72,29 +71,9 @@ const useDraggableScroll = (ref) => {
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
   const projectsRef = useRef(null);
 
-  const toggleLightbox = () => {
-    setLightboxOpen(!lightboxOpen);
-  };
-
-  const onChange = (index, item) => {
-    console.log(`Carousel changed to slide ${index}`, item);
-};
-
-const onClickItem = (index, item) => {
-    console.log(`Clicked item ${index}`, item);
-};
-
-const onClickThumb = (index, item) => {
-    console.log(`Clicked thumbnail ${index}`, item);
-};
-useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
+  useDraggableScroll(projectsRef);
 
   const filteredProjects = projects.filter((project) =>
     project.categories.includes(activeCategory) || activeCategory === 'all'
@@ -122,7 +101,8 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
     if (projects.length > 0) {
       setSelectedProject(projects[0]);
     }
-  }, [projects]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   
   
@@ -197,6 +177,7 @@ useDraggableScroll(projectsRef); // Apply draggable scroll to this ref
         selectedProject.video && (
           <div key="video-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <iframe
+              title={selectedProject.title}
               src={selectedProject.video.replace("watch?v=", "embed/")}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

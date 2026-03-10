@@ -57,6 +57,7 @@ const ServicesSection = () => {
     const timeoutId = setTimeout(startSpinning, 100);
 
     return () => clearTimeout(timeoutId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -66,7 +67,8 @@ const ServicesSection = () => {
     } else if (spinning) {
       stopSpinning();
     }
-  }, [currentService]); // Effect runs when `currentService` updates
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentService, spinning]);
 
   return (
     <section id="services" className="services z-50">
